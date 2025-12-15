@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тихонов Клочкова онлайн мморпг 3 в ряд</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">Тихонов Клочкова 3вРяд</div>
+            <div class="nav-links">
+                <button id="home-btn" class="nav-btn active">Главная</button>
+                <button id="game-btn" class="nav-btn">Играть</button>
+                <button id="profile-btn" class="nav-btn">Профиль</button>
+                <button id="leaderboard-btn" class="nav-btn">Рейтинг</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container">
+            <!-- Home Page -->
+            <section id="home-page" class="page active">
+                <h1>Добро пожаловать в Тихонов Клочкова онлайн мморпг 3 в ряд!</h1>
+                <p>Сражайтесь в увлекательной головоломке "три в ряд" против других игроков или ботов и получайте ценные награды!</p>
+                <button id="play-now-btn" class="btn btn-primary">Начать играть</button>
+            </section>
+
+            <!-- Game Page -->
+            <section id="game-page" class="page">
+                <div class="game-container">
+                    <div class="game-header">
+                        <div class="player-info">
+                            <span>Игрок: <span id="player-name">Гость</span></span>
+                            <span>Здоровье: <span id="player-health">100</span></span>
+                        </div>
+                        <div class="opponent-info">
+                            <span>Противник: <span id="opponent-name">Бот</span></span>
+                            <span>Здоровье: <span id="opponent-health">100</span></span>
+                        </div>
+                        <div class="timer">
+                            <span>Время: <span id="timer">45</span>s</span>
+                        </div>
+                    </div>
+                    
+                    <div class="game-board-container">
+                        <div id="game-board" class="game-board"></div>
+                    </div>
+                    
+                    <div class="game-controls">
+                        <button id="start-game-btn" class="btn btn-success">Начать игру</button>
+                        <button id="vs-bot-btn" class="btn btn-secondary">Против бота</button>
+                        <button id="vs-player-btn" class="btn btn-secondary">Против игрока</button>
+                    </div>
+                    
+                    <div class="game-stats">
+                        <div class="score">Очки: <span id="player-score">0</span></div>
+                        <div class="opponent-score">Очки противника: <span id="opponent-score">0</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Page -->
+            <section id="profile-page" class="page">
+                <h2>Личный кабинет</h2>
+                <div class="profile-content">
+                    <div class="character-section">
+                        <h3>Персонаж</h3>
+                        <div class="character-info">
+                            <p><strong>Имя:</strong> <span id="char-name">-</span></p>
+                            <p><strong>Уровень:</strong> <span id="char-level">1</span></p>
+                            <p><strong>Рейтинг:</strong> <span id="char-rating">1000</span></p>
+                            <p><strong>Побед:</strong> <span id="char-wins">0</span> | <strong>Поражений:</strong> <span id="char-losses">0</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="inventory-section">
+                        <h3>Экипировка</h3>
+                        <div id="inventory-items" class="inventory-grid">
+                            <!-- Items will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leaderboard Page -->
+            <section id="leaderboard-page" class="page">
+                <h2>Рейтинг игроков</h2>
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Место</th>
+                            <th>Игрок</th>
+                            <th>Рейтинг</th>
+                            <th>Победы</th>
+                            <th>Поражения</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Leaderboard data will be loaded here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
