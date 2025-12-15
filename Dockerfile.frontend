@@ -1,0 +1,12 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Установка простого HTTP сервера для раздачи статических файлов
+RUN npm install -g http-server
+
+COPY frontend/public/ .
+
+EXPOSE 3000
+
+CMD ["http-server", "-p", "3000"]
